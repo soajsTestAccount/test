@@ -1,5 +1,6 @@
 'use strict';
 
+//test config
 module.exports = {
     serviceName: 'test',
     serviceGroup: 'Test Group',
