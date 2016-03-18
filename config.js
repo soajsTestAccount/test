@@ -8,7 +8,15 @@ module.exports = {
     awareness: false,
     requestTimeout: 30,
     requestTimeoutRenewal: 5,
+    src: {
+        repo: 'test',
+        owner: 'soajsTestAccount',
+        main: '/index.js'
+    },
     type: 'daemon',
     multi: null,
-    main: 'index.js'
+    prerequisites: {
+        cpu: '',
+        memory: ''
+    }
 };
