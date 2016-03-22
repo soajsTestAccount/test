@@ -7,7 +7,7 @@ var test2 = require('../anotherFile'),
 module.exports = {
     serviceName: 'test',
     serviceGroup: 'Test Group',
-    servicePort: 5566,
+    servicePort: 6789,
     extKeyRequired: false,
     awareness: false,
     requestTimeout: 30,
