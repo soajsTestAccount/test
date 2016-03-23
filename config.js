@@ -10,7 +10,7 @@ module.exports = {
     servicePort: 6709,
     requestTimeout: 30,
     requestTimeoutRenewal: 5,
-    src: {
+    src: {//change
         repo: 'test',
         owner: 'soajsTestAccount',
         main: '/index.js'
