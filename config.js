@@ -10,7 +10,7 @@ module.exports = {
     servicePort: 6789,
     extKeyRequired: false,
     awareness: false,
-    requestTimeout: 30,
+    requestTimeout: 300,
     requestTimeoutRenewal: 5,
     src: {
         repo: 'test',
