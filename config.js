@@ -3,7 +3,7 @@
 var test1 = require('../someFile');
 var test2 = require('../anotherFile'),
     test3 = require('../lastFile');
-
+//testing git reset feature
 module.exports = {
     serviceName: 'test',
     serviceGroup: 'Test Group',
