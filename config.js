@@ -1,36 +1,85 @@
 'use strict';
 
-var test1 = require('../someFile');
-var test2 = require('../anotherFile'),
-    test3 = require('../lastFile');
-//testing git reset feature
 module.exports = {
-    serviceName: 'test',
-    serviceGroup: 'Test Group',
-    servicePort: 6709,
+    serviceName: "jsconfbeirut",
+    serviceGroup: "JSConf",
     requestTimeout: 30,
     requestTimeoutRenewal: 5,
-    src: {//change
-        repo: 'test',
+    servicePort: 4111,
+    extKeyRequired: true,
+    type: 'service',
+    multi: null,
+    src: {
         owner: 'soajsTestAccount',
+        repo: 'test',
         main: '/index.js'
     },
-    versions: {
-        "1": {
-            "extKeyRequired": true,
-            "awareness": false,
-            "apis": [
-                {
-                    "l":" Start",
-                    "v": "/start"
-                }
-            ]
-        }
-    },
-    type: 'daemon',
-    multi: null,
     prerequisites: {
         cpu: '',
         memory: ''
+    },
+	"awareness": true,
+    "errors": {
+        "600": "Database error",
+        "601": "Missing info"
+    },
+    "schema": {
+        "/addInfo": {
+            "_apiInfo":{
+                "l": "Add Info",
+                "group": "Information",
+	            "groupMain": true
+            },
+            "username": {
+                "source": ['body.username'],
+                "required": true,
+                "validation": {
+                    "type": "string",
+                    "minLength": 4,
+                    "maxLength": 8,
+                    "pattern": /^\D[\w\d_-]+$/
+                }
+            },
+            "name": {
+                "source": ['body.name'],
+                "required": false,
+                "default": "anonymous",
+                "validation": {
+                    "type": "string"
+                }
+            },
+            "email": {
+                "source": ['body.email'],
+                "required": true,
+                "validation": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "address": {"type": "string", "format": "email", "required": true},
+                            "primary": {"type": "boolean", "required": true}
+                        }
+                    },
+                    "minItems": 1,
+                    "maxItems": 5,
+                    "uniqueItems": true
+                }
+            }
+        },
+        "/getInfo": {
+            "_apiInfo": {
+                "l": "Get Info",
+                "group": "Information",
+                "groupMain": true
+            },
+            "email": {
+                "source": ['query.email'],
+                "required": true,
+                "validation": {
+                    "type": "string",
+                    "format": "email"
+                }
+            }
+        }
     }
 };
