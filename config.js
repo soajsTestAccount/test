@@ -3,7 +3,7 @@
 module.exports = {
     serviceName: "jsconfbeirut",
     serviceGroup: "JSConf",
-    serviceVersion: "1",
+    serviceVersion: 2,
     requestTimeout: 30,
     requestTimeoutRenewal: 5,
     servicePort: 4111,
@@ -74,6 +74,12 @@ module.exports = {
                     "type": "string",
                     "format": "email"
                 }
+            }
+        },
+        "/test/": {
+            "_apiInfo": {
+                "l": "Test",
+                "group": "Information"
             }
         }
     }
