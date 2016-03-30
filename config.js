@@ -1,5 +1,5 @@
 'use strict';
-//test
+
 module.exports = {
     serviceName: "jsconfbeirut",
     serviceGroup: "JSConf",
