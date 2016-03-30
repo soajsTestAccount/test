@@ -10,11 +10,6 @@ module.exports = {
     extKeyRequired: true,
     type: 'service',
     multi: null,
-    src: {
-        owner: 'soajsTestAccount',
-        repo: 'test',
-        main: '/index.js'
-    },
     prerequisites: {
         cpu: '',
         memory: ''
