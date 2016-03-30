@@ -3,6 +3,7 @@
 module.exports = {
     serviceName: "jsconfbeirut",
     serviceGroup: "JSConf",
+    serviceVersion: "1",
     requestTimeout: 30,
     requestTimeoutRenewal: 5,
     servicePort: 4111,
