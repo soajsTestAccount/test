@@ -9,7 +9,6 @@ module.exports = {
     servicePort: 4111,
     extKeyRequired: true,
     type: 'service',
-    multi: null,
     prerequisites: {
         cpu: '',
         memory: ''
