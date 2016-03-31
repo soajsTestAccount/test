@@ -3,7 +3,7 @@
 module.exports = {
     serviceName: "jsconfbeirut",
     serviceGroup: "JSConf",
-    serviceVersion: 2,
+    serviceVersion: 1,
     requestTimeout: 30,
     requestTimeoutRenewal: 5,
     servicePort: 4111,
@@ -13,6 +13,7 @@ module.exports = {
         cpu: '',
         memory: ''
     },
+    main: 'app.js',
 	"awareness": true,
     "errors": {
         "600": "Database error",
